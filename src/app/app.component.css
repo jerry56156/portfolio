@@ -1,18 +1,13 @@
 /* app.component.css */
 :host {
   display: block;
-  min-height: 100dvh;
-}
-
-.bg-video,
-.bg-overlay {
-  position: fixed;
-  inset: 0;
 }
 
 .bg-video {
   z-index: -2;
   pointer-events: none;
+  inset: 0;
+  position: fixed;
 }
 
 .bg-video video {
@@ -21,13 +16,17 @@
   object-fit: cover;
 }
 
-.bg-overlay {
+.overlay {
+  position: fixed;
+  inset: 0;
   z-index: -1;
   pointer-events: none;
-  background: rgba(0, 0, 0, 0.55);
+}
+
+.content {
+  color: whitesmoke;
 }
 
 .page {
   position: relative;
-  min-height: 100dvh;
 }
