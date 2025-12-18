@@ -25,6 +25,12 @@
 
 .content {
   color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+}
+
+.content > section {
+  min-height: 100dvh
 }
 
 .page {
