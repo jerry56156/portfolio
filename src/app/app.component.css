@@ -29,10 +29,6 @@
   flex-direction: column;
 }
 
-.content > section {
-  min-height: 100dvh
-}
-
 .page {
   position: relative;
 }
