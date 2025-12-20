@@ -1,9 +1,12 @@
 import { AfterViewInit, Component } from '@angular/core';
+import { SocialButtonComponent } from '../social-button/social-button.component';
+
 
 @Component({
   selector: 'app-hero',
   templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.css']
+  styleUrls: ['./hero.component.css'],
+  imports: [SocialButtonComponent]
 })
 export class HeroComponent implements AfterViewInit {
 
@@ -54,4 +57,5 @@ export class HeroComponent implements AfterViewInit {
 
     step();
   }
+
 }
