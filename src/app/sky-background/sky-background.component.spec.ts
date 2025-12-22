@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AboutMeComponent } from './about-me.component';
+import { SkyBackgroundComponent } from './sky-background.component';
 
-describe('AboutMeComponent', () => {
-  let component: AboutMeComponent;
-  let fixture: ComponentFixture<AboutMeComponent>;
+describe('SkyBackgroundComponent', () => {
+  let component: SkyBackgroundComponent;
+  let fixture: ComponentFixture<SkyBackgroundComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AboutMeComponent]
+      imports: [SkyBackgroundComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AboutMeComponent);
+    fixture = TestBed.createComponent(SkyBackgroundComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
