@@ -1,0 +1,7 @@
+<button type="button" class="btn" (click)="toggle()" [attr.aria-label]="iconLabel()">
+  @if (isDark()) {
+    <lucide-icon [img]="icons.Sun" class="icon" aria-hidden="true"></lucide-icon>
+  } @else {
+    <lucide-icon [img]="icons.Moon" class="icon" aria-hidden="true"></lucide-icon>
+  }
+</button>
