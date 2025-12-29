@@ -18,8 +18,8 @@ export class SkyBackgroundComponent implements AfterViewInit {
   private readonly assets = {
     stillDay: 'media/day.jpg',
     stillNight: 'media/night.jpg',
-    d2n: 'assets/sky/day-to-night.mp4',
-    n2d: 'assets/sky/night-to-day.mp4',
+    d2n: 'media/day-to-night.mp4',
+    n2d: 'media/night-to-day.mp4',
   } as const;
 
   readonly stillSrc = computed(() =>
@@ -59,6 +59,14 @@ export class SkyBackgroundComponent implements AfterViewInit {
       void el.play();
     });
   }
+
+setDay(): void {
+  this.setMode('day');
+}
+
+setNight(): void {
+  this.setMode('night');
+}
 
   onEnded(): void {
     const el = this.vid?.nativeElement;

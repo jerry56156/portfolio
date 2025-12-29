@@ -1,17 +1,42 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeroComponent } from "./hero/hero.component";
-import { SkillsComponent } from "./skills/skills.component";
-import { ProjectsComponent } from "./projects/projects.component";
-import { ContactMeComponent } from "./contact-me/contact-me.component";
-import { SkyBackgroundComponent } from "./sky-background/sky-background.component";
+import { HeroComponent } from './hero/hero.component';
+import { SkillsComponent } from './skills/skills.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { SkyBackgroundComponent } from './sky-background/sky-background.component';
+import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeroComponent, SkillsComponent, ProjectsComponent, ContactMeComponent, SkyBackgroundComponent],
+  imports: [
+    RouterOutlet,
+    HeroComponent,
+    SkillsComponent,
+    ProjectsComponent,
+    SkyBackgroundComponent,
+    ThemeToggleComponent,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
+
   title = 'portfolio';
+
+  @ViewChild(SkyBackgroundComponent) private sky!: SkyBackgroundComponent;
+
+  ngAfterViewInit(): void {
+  }
+
+  setNight = (): void => {
+    console.log('hello to night');
+    this.sky?.setNight();
+  };
+
+  setDay = (): void => {
+    console.log('hello to day');
+    this.sky?.setDay();
+  };
+
+
 }

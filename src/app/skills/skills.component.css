@@ -5,7 +5,6 @@
   flex-direction: column;
   inset: 0;
   min-height: 100dvh;
-  pointer-events: none;
   background: rgba(0, 0, 0, 0);
 }
 

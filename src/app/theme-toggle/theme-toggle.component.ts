@@ -17,9 +17,9 @@ export class ThemeToggleComponent {
   readonly onLightToDark = input<(() => void) | null>(null);
   readonly onDarkToLight = input<(() => void) | null>(null);
 
-  readonly initialDark = input(false);
+  readonly initialDark = input(true);
 
-  readonly isDark = signal(false);
+  readonly isDark = signal(true);
 
   readonly icon = computed(() => (this.isDark() ? Sun : Moon));
   readonly iconLabel = computed(() => (this.isDark() ? 'Switch to light mode' : 'Switch to dark mode'));
@@ -31,14 +31,17 @@ export class ThemeToggleComponent {
   }
 
   toggle(): void {
+    
     const goingToDark = !this.isDark();
 
     if (goingToDark) {
       this.onLightToDark()?.();
+      console.log('hello to night2')
     } else {
       this.onDarkToLight()?.();
+      console.log('hello to day2')
     }
-
+    
     this.isDark.set(goingToDark);
   }
 }

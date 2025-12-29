@@ -1,6 +1,10 @@
 <div class="bg-video" aria-hidden="true">
-    <sky-background #style></sky-background>
+    <sky-background></sky-background>
 </div>
+<app-theme-toggle
+  [onLightToDark]="setNight"
+  [onDarkToLight]="setDay">
+</app-theme-toggle>
 
 <div class="overlay" aria-hidden="true"></div>
 
@@ -8,7 +12,6 @@
   <app-hero/>
   <app-skills/>
   <app-projects/>
-  <app-contact-me/>
 </div>
 
 
