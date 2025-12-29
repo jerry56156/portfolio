@@ -2,7 +2,6 @@
 
 
 .social-btn{
-  --icon-size: 20px;
 
   background: transparent;
   color: white;
@@ -40,10 +39,4 @@
 
 .social-btn:hover .content{
   transform: translateX(8px);
-}
-
-/* Optional: size the icon container via CSS var too */
-.lucide{
-  width: var(--icon-size);
-  height: var(--icon-size);
 }
