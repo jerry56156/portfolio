@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, input, signal } from '@angular/core';
-import { LucideAngularModule, Github, Linkedin, Mail } from 'lucide-angular';
+import { LucideAngularModule, Github, Linkedin, Mail, MapPin } from 'lucide-angular';
 
-export type SocialKind = 'linkedin' | 'github' | 'mail';
+export type SocialKind = 'linkedin' | 'github' | 'mail' | 'location';
 
 @Component({
   selector: 'app-social-button',
@@ -23,6 +23,7 @@ export class SocialButtonComponent {
   readonly icon = computed(() => {
     if (this.kind() === 'linkedin') return Linkedin;
     if (this.kind() === 'github') return Github;
+    if (this.kind() === 'location') return MapPin;
     return Mail;
   });
 
