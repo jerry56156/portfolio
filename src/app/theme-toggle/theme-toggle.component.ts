@@ -36,10 +36,8 @@ export class ThemeToggleComponent {
 
     if (goingToDark) {
       this.onLightToDark()?.();
-      console.log('hello to night2')
     } else {
       this.onDarkToLight()?.();
-      console.log('hello to day2')
     }
     
     this.isDark.set(goingToDark);

@@ -29,12 +29,10 @@ export class AppComponent implements AfterViewInit {
   }
 
   setNight = (): void => {
-    console.log('hello to night');
     this.sky?.setNight();
   };
 
   setDay = (): void => {
-    console.log('hello to day');
     this.sky?.setDay();
   };
 

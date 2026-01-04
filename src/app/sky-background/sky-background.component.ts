@@ -45,9 +45,14 @@ export class SkyBackgroundComponent implements AfterViewInit {
     this.mode.set(next);
     this.phase.set('transition');
 
+    console.log("hello1");
+
     queueMicrotask(() => {
+      console.log("hello2");
       const el = this.vid?.nativeElement;
+      console.log("hello3");
       if (!el) return;
+      console.log("hello4");
 
       el.pause();
       el.currentTime = 0;
@@ -55,18 +60,20 @@ export class SkyBackgroundComponent implements AfterViewInit {
       el.src =
         prev === 'day' && next === 'night' ? this.assets.d2n : this.assets.n2d;
 
+      console.log("hello");
+
       el.load();
       void el.play();
     });
   }
 
-setDay(): void {
-  this.setMode('day');
-}
+  setDay(): void {
+    this.setMode('day');
+  }
 
-setNight(): void {
-  this.setMode('night');
-}
+  setNight(): void {
+    this.setMode('night');
+  }
 
   onEnded(): void {
     const el = this.vid?.nativeElement;

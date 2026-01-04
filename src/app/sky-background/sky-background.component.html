@@ -1,22 +1,12 @@
 <div class="wrap" [attr.data-mode]="mode()">
-  @if (phase() === 'still') {
-    <img
-      class="layer"
-      [src]="stillSrc()"
-      alt=""
-      aria-hidden="true"
-      draggable="false"
-    />
-  } @else {
-    <video
-      #vid
-      class="layer"
-      muted
-      playsinline
-      preload="auto"
-      (ended)="onEnded()"
-      aria-hidden="true"
-    ></video>
-  }
+  <video
+    #vid
+    class="layer"
+    [attr.poster]="stillSrc()"
+    muted
+    playsinline
+    preload="auto"
+    (ended)="onEnded()"
+    aria-hidden="true"
+  ></video>
 </div>
-

@@ -20,4 +20,8 @@
   object-fit: cover;
   user-select: none;
   pointer-events: none;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../../../public/media/night.jpg');
 }
