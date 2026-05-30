@@ -1,8 +1,12 @@
 <div class="wrap" [attr.data-mode]="mode()">
+  <img
+    class="still-layer"
+    [src]="stillSrc()"
+    aria-hidden="true"
+  />
   <video
     #vid
-    class="layer"
-    [attr.poster]="stillSrc()"
+    class="video-layer"
     muted
     playsinline
     preload="auto"

@@ -14,6 +14,7 @@ export class SkyBackgroundComponent implements AfterViewInit {
 
   readonly mode = signal<Mode>('night');
   readonly phase = signal<Phase>('still');
+  private readonly settledMode = signal<Mode>('night');
 
   private readonly assets = {
     stillDay: 'media/day.jpg',
@@ -23,9 +24,8 @@ export class SkyBackgroundComponent implements AfterViewInit {
   } as const;
 
   readonly stillSrc = computed(() =>
-    this.mode() === 'day' ? this.assets.stillDay : this.assets.stillNight
+    this.settledMode() === 'day' ? this.assets.stillDay : this.assets.stillNight
   );
-
 
   ngAfterViewInit(): void {
     const el = this.vid?.nativeElement;
@@ -37,7 +37,6 @@ export class SkyBackgroundComponent implements AfterViewInit {
     el.load();
   }
 
-  
   setMode(next: Mode): void {
     const prev = this.mode();
     if (prev === next) return;
@@ -45,23 +44,13 @@ export class SkyBackgroundComponent implements AfterViewInit {
     this.mode.set(next);
     this.phase.set('transition');
 
-    console.log("hello1");
-
     queueMicrotask(() => {
-      console.log("hello2");
       const el = this.vid?.nativeElement;
-      console.log("hello3");
       if (!el) return;
-      console.log("hello4");
 
       el.pause();
       el.currentTime = 0;
-
-      el.src =
-        prev === 'day' && next === 'night' ? this.assets.d2n : this.assets.n2d;
-
-      console.log("hello");
-
+      el.src = prev === 'day' ? this.assets.d2n : this.assets.n2d;
       el.load();
       void el.play();
     });
@@ -79,6 +68,7 @@ export class SkyBackgroundComponent implements AfterViewInit {
     const el = this.vid?.nativeElement;
     if (el) el.pause();
 
+    this.settledMode.set(this.mode());
     this.phase.set('still');
   }
 }

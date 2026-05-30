@@ -12,7 +12,8 @@
   pointer-events: none;
 }
 
-.layer {
+.still-layer,
+.video-layer {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -20,8 +21,8 @@
   object-fit: cover;
   user-select: none;
   pointer-events: none;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url('../../../public/media/night.jpg');
+}
+
+.video-layer {
+  background: transparent;
 }
