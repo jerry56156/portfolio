@@ -11,12 +11,12 @@
   width: 44px;
   height: 44px;
   border-radius: 999px;
-  color: white;
-  border: 1px solid white;
+  color: var(--text-primary);
+  border: 1px solid var(--text-primary);
   background: rgba(0,0,0,0);
   backdrop-filter: blur(10px);
   cursor: pointer;
-  transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+  transition: transform 120ms ease, background 120ms ease, color 1.9s ease, border-color 1.9s ease;
 }
 
 .btn:hover {

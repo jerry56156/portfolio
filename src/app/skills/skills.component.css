@@ -21,10 +21,10 @@
   margin: 24px 0 0 0;
 }
 
-.kw   { color: #c586c0; }
-.var  { color: #9cdcfe; }
-.op   { color: #d4d4d4; }
-.str  { color: #ce9178; }
+.kw   { color: var(--color-kw);  transition: color 1.9s ease; }
+.var  { color: var(--color-var); transition: color 1.9s ease; }
+.op   { color: var(--color-op);  transition: color 1.9s ease; }
+.str  { color: var(--color-str); transition: color 1.9s ease; }
 
 .category {
   margin-bottom: 24px;
@@ -51,8 +51,9 @@
   font-size: 0.82rem;
   padding: 4px 12px;
   border-radius: 4px;
-  background: rgba(0, 0, 0, 0.38);
+  background: var(--tag-bg);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #9cdcfe;
+  border: 1px solid var(--tag-border);
+  color: var(--tag-color);
+  transition: background-color 1.9s ease, border-color 1.9s ease, color 1.9s ease;
 }

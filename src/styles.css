@@ -7,3 +7,48 @@ body {
   font-family: monospace;
 }
 
+/* Night mode (default) */
+app-root {
+  --card-bg: rgba(0, 0, 0, 0.38);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --text-primary: whitesmoke;
+  --text-secondary: #d4d4d4;
+  --color-kw: #c586c0;
+  --color-var: #9cdcfe;
+  --color-type: #98c379;
+  --color-op: #d4d4d4;
+  --color-str: #ce9178;
+  --color-comment: #6a9955;
+  --tag-bg: rgba(0, 0, 0, 0.38);
+  --tag-border: rgba(255, 255, 255, 0.12);
+  --tag-color: #9cdcfe;
+  --tech-tag-bg: rgba(150, 100, 180, 0.15);
+  --tech-tag-border: rgba(197, 134, 192, 0.3);
+  --tech-tag-color: #c586c0;
+  --timeline-line: rgba(255, 255, 255, 0.25);
+  --dot-bg: #9cdcfe;
+  --dot-border: rgba(0, 0, 0, 0.6);
+}
+
+/* Day mode */
+app-root[data-theme="day"] {
+  --card-bg: rgba(255, 255, 255, 0.6);
+  --card-border: rgba(0, 0, 0, 0.1);
+  --text-primary: #1a1a1a;
+  --text-secondary: #2a2a2a;
+  --color-kw: #7a00b0;
+  --color-var: #0052cc;
+  --color-type: #267326;
+  --color-op: #1a1a1a;
+  --color-str: #a63200;
+  --color-comment: #1e6b10;
+  --tag-bg: rgba(255, 255, 255, 0.6);
+  --tag-border: rgba(0, 0, 0, 0.12);
+  --tag-color: #0052cc;
+  --tech-tag-bg: rgba(100, 0, 140, 0.1);
+  --tech-tag-border: rgba(122, 0, 176, 0.3);
+  --tech-tag-color: #7a00b0;
+  --timeline-line: rgba(0, 0, 0, 0.2);
+  --dot-bg: #0052cc;
+  --dot-border: rgba(255, 255, 255, 0.6);
+}
