@@ -1,12 +1,23 @@
-<div class="screen">
-  <div class="main-box">
-    <h1 class="code">
-      <span class="kw">let </span>
-      <span class="var">intro </span>
-      <span class="op">= </span>
-      <span class="str">"Hello there! I am <b>Jerry Tomy Mukalel</b>,\n"</span>
-    </h1>
+<section class="section">
+  <div class="container">
+    <p class="section-label">
+      <span class="kw">const </span><span class="var">skills </span><span class="op">= &#123;</span>
+    </p>
 
-    <p>I am a Final Year Computer Science student with a minor in Math at the University of Calgary. I am an aspiring Software Developer, passionate about crafting code, automating the future, and continuously learning more!</p>
+    @for (category of categories; track category.name) {
+      <div class="category">
+        <p class="category-label">
+          <span class="str">"{{ category.name }}"</span><span class="op">: [</span>
+        </p>
+        <div class="tags">
+          @for (skill of category.items; track skill) {
+            <span class="tag">{{ skill }}</span>
+          }
+        </div>
+        <p class="close-bracket"><span class="op">]</span></p>
+      </div>
+    }
+
+    <p class="section-label"><span class="op">&#125;</span></p>
   </div>
-</div>
+</section>

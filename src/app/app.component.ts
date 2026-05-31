@@ -1,6 +1,7 @@
 import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeroComponent } from './hero/hero.component';
+import { ExperienceComponent } from './experience/experience.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SkyBackgroundComponent } from './sky-background/sky-background.component';
@@ -11,6 +12,7 @@ import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
   imports: [
     RouterOutlet,
     HeroComponent,
+    ExperienceComponent,
     SkillsComponent,
     ProjectsComponent,
     SkyBackgroundComponent,

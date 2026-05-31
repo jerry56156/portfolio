@@ -1,1 +1,32 @@
-<p>experience works!</p>
+<section class="section">
+  <div class="container">
+    <p class="section-label">
+      <span class="kw">const </span><span class="var">experience </span><span class="op">= [</span>
+    </p>
+
+    <div class="timeline">
+      @for (job of jobs; track job.company; let i = $index) {
+        <div class="entry" [class.right]="i % 2 === 1">
+          <div class="job-card">
+            <div class="job-header">
+              <span class="job-title">{{ job.title }}</span>
+              <span class="company">{{ job.company }}</span>
+              <span class="period">{{ job.period }}</span>
+              @if (job.location) {
+                <span class="location">{{ job.location }}</span>
+              }
+            </div>
+            <ul class="bullets">
+              @for (bullet of job.bullets; track bullet) {
+                <li>{{ bullet }}</li>
+              }
+            </ul>
+          </div>
+          <div class="dot"></div>
+        </div>
+      }
+    </div>
+
+    <p class="section-label"><span class="op">]</span></p>
+  </div>
+</section>

@@ -1,12 +1,27 @@
-<div class="screen">
-  <div class="main-box">
-    <h1 class="code">
-      <span class="kw">let </span>
-      <span class="var">intro </span>
-      <span class="op">= </span>
-      <span class="str">"Hello there! I am <b>Jerry Tomy Mukalel</b>,\n"</span>
-    </h1>
+<section class="section">
+  <div class="container">
+    <p class="section-label">
+      <span class="kw">const </span><span class="var">projects </span><span class="op">= [</span>
+    </p>
 
-    <p>I am a Final Year Computer Science student with a minor in Math at the University of Calgary. I am an aspiring Software Developer, passionate about crafting code, automating the future, and continuously learning more!</p>
+    <div class="projects-grid">
+      @for (project of projects; track project.name) {
+        <div class="project-card">
+          <h3 class="project-name">{{ project.name }}</h3>
+          <ul class="bullets">
+            @for (bullet of project.bullets; track bullet) {
+              <li>{{ bullet }}</li>
+            }
+          </ul>
+          <div class="tech-tags">
+            @for (tech of project.tech; track tech) {
+              <span class="tech-tag">{{ tech }}</span>
+            }
+          </div>
+        </div>
+      }
+    </div>
+
+    <p class="section-label"><span class="op">]</span></p>
   </div>
-</div>
+</section>
