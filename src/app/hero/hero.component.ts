@@ -1,12 +1,13 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { SocialButtonComponent } from '../social-button/social-button.component';
+import { SpotifyButtonComponent } from '../spotify-button/spotify-button.component';
 
 
 @Component({
   selector: 'app-hero',
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.css'],
-  imports: [SocialButtonComponent]
+  imports: [SocialButtonComponent, SpotifyButtonComponent]
 })
 export class HeroComponent implements AfterViewInit {
 

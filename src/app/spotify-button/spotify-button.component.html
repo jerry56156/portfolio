@@ -1,0 +1,9 @@
+@if (!loading() && track(); as t) {
+  <button type="button" class="social-btn" (click)="open()">
+    <span class="lead">=&gt;</span>
+    <span class="content">
+      <lucide-icon class="lucide" [img]="musicIcon" [size]="22"></lucide-icon>
+      <span class="label">{{ t.title }} · {{ t.artist }}</span>
+    </span>
+  </button>
+}

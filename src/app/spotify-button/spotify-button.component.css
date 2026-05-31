@@ -1,0 +1,47 @@
+:host { display: inline-block; }
+
+.social-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid transparent;
+  padding: 10px 14px;
+  padding-left: 0px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  font: inherit;
+  max-width: 360px;
+}
+
+.lead {
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin-right: 0;
+  transition: width 160ms ease, opacity 160ms ease, margin-right 160ms ease;
+}
+
+.content {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transform: translateX(0);
+  transition: transform 160ms ease;
+}
+
+.label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 280px;
+}
+
+.social-btn:hover .lead {
+  width: 22px;
+  opacity: 1;
+  margin-right: 10px;
+}
+
+.social-btn:hover .content {
+  transform: translateX(8px);
+}
