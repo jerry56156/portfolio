@@ -9,6 +9,7 @@ body {
 
 /* Night mode (default) */
 app-root {
+  --section-bg: rgba(0, 0, 0, 0.28);
   --card-bg: rgba(0, 0, 0, 0.38);
   --card-border: rgba(255, 255, 255, 0.08);
   --text-primary: whitesmoke;
@@ -32,6 +33,7 @@ app-root {
 
 /* Day mode */
 app-root[data-theme="day"] {
+  --section-bg: rgba(255, 255, 255, 0.32);
   --card-bg: rgba(255, 255, 255, 0.6);
   --card-border: rgba(0, 0, 0, 0.1);
   --text-primary: #1a1a1a;

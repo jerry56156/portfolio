@@ -10,6 +10,11 @@
   width: 55vw;
   display: flex;
   flex-direction: column;
+  padding: 40px 48px;
+  background: var(--section-bg);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  transition: background-color 1.9s ease;
 }
 
 .section-label {
