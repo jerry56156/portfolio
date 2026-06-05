@@ -1,5 +1,4 @@
 .section {
-  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,17 +17,12 @@
 }
 
 .section-label {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  font-weight: 400;
   margin: 0 0 32px 0;
+  color: var(--color-comment);
+  transition: color 1.9s ease;
 }
-
-.section-label:last-child {
-  margin: 32px 0 0 0;
-}
-
-.kw   { color: var(--color-kw);      transition: color 1.9s ease; }
-.var  { color: var(--color-var);     transition: color 1.9s ease; }
-.op   { color: var(--color-op);      transition: color 1.9s ease; }
 
 .timeline {
   position: relative;
@@ -89,7 +83,6 @@
   display: flex;
   flex-direction: column;
   gap: 3px;
-  margin-bottom: 14px;
 }
 
 .job-title {
@@ -113,11 +106,21 @@
 }
 
 .bullets {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
   margin: 0;
   padding-left: 16px;
   display: flex;
   flex-direction: column;
   gap: 6px;
+  transition: max-height 0.45s ease, opacity 0.35s ease, margin-top 0.45s ease, color 1.9s ease;
+}
+
+.job-card:hover .bullets {
+  max-height: 400px;
+  opacity: 1;
+  margin-top: 14px;
 }
 
 .bullets li {

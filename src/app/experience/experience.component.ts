@@ -20,7 +20,7 @@ export class ExperienceComponent {
       title: 'Software Developer',
       company: 'Ulyfe',
       period: 'May 2026 – Present',
-      location: '',
+      location: 'Chicago (Remote)',
       bullets: [
         'Owned end-to-end delivery of the public-facing marketing site for a live Gen Z startup.',
         'Iterated on features across 4+ feedback cycles based on direct input from design and product leads.',
