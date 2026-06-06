@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { LucideAngularModule, Music2 } from 'lucide-angular';
+import { LucideAngularModule, Disc3 } from 'lucide-angular';
 
 interface SpotifyTrack {
   title: string | null;
@@ -21,7 +21,7 @@ export class SpotifyButtonComponent implements OnInit {
 
   readonly track = signal<SpotifyTrack | null>(null);
   readonly loading = signal(true);
-  readonly musicIcon = Music2;
+  readonly discIcon = Disc3;
 
   ngOnInit(): void {
     this.http.get<SpotifyTrack>('/api/spotify').subscribe({
@@ -31,10 +31,5 @@ export class SpotifyButtonComponent implements OnInit {
       },
       error: () => this.loading.set(false),
     });
-  }
-
-  open(): void {
-    const url = this.track()?.songUrl;
-    if (url) window.open(url, '_blank', 'noreferrer');
   }
 }

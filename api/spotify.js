@@ -18,7 +18,7 @@ async function getAccessToken() {
   return data.access_token;
 }
 
-module.exports = async function handler(_req, res) {
+export default async function handler(_req, res) {
   try {
     const accessToken = await getAccessToken();
 
@@ -42,4 +42,4 @@ module.exports = async function handler(_req, res) {
   } catch (e) {
     return res.status(500).json({ title: null });
   }
-};
+}

@@ -1,9 +1,8 @@
 @if (!loading() && track(); as t) {
-  <button type="button" class="social-btn" (click)="open()">
-    <span class="lead">=&gt;</span>
-    <span class="content">
-      <lucide-icon class="lucide" [img]="musicIcon" [size]="22"></lucide-icon>
-      <span class="label">{{ t.title }} · {{ t.artist }}</span>
-    </span>
-  </button>
+  <p class="last-listened">
+    <lucide-icon class="disc" [img]="discIcon" [size]="15"></lucide-icon>
+    Last listened to:
+    <a class="track-link" [href]="t.songUrl" target="_blank" rel="noreferrer">{{ t.title }}</a>
+    by {{ t.artist }}
+  </p>
 }
