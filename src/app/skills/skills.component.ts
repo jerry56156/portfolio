@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-interface SkillCategory {
-  name: string;
+interface SkillGroup {
+  label: string;
   items: string[];
 }
 
@@ -12,21 +12,18 @@ interface SkillCategory {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SkillsComponent {
-  readonly categories: SkillCategory[] = [
+  readonly groups: SkillGroup[] = [
     {
-      name: 'Languages & Technologies',
-      items: [
-        'Python', 'Java', 'C# (.NET)', 'C++', 'HTML/CSS/JS',
-        'TypeScript', 'React', 'Svelte', 'Node.js', 'Angular',
-        'SQL', 'R', 'Docker', 'Git', 'Linux', 'macOS', 'Windows',
-      ],
+      label: 'Languages',
+      items: ['Python', 'TypeScript', 'Java', 'C# (.NET)', 'C++', 'SQL', 'R', 'HTML / CSS'],
     },
     {
-      name: 'Concepts',
-      items: [
-        'Data Structures & Algorithms', 'Linear Algebra', 'Probability',
-        'Partial Differential Equations', 'Lean-Agile & Scrum', 'OOP', 'SOLID Principles',
-      ],
+      label: 'Frameworks & Libraries',
+      items: ['Angular', 'React', 'Svelte', 'Node.js', '.NET'],
+    },
+    {
+      label: 'Tools & Platforms',
+      items: ['Docker', 'Git', 'Linux', 'macOS', 'Windows'],
     },
   ];
 }

@@ -1,23 +1,16 @@
 <section class="section">
   <div class="container">
-    <p class="section-label">
-      <span class="kw">const </span><span class="var">skills </span><span class="op">= &#123;</span>
-    </p>
+    <h2 class="section-label">// Skills</h2>
 
-    @for (category of categories; track category.name) {
-      <div class="category">
-        <p class="category-label">
-          <span class="str">"{{ category.name }}"</span><span class="op">: [</span>
-        </p>
+    @for (group of groups; track group.label) {
+      <div class="group">
+        <p class="group-label">{{ group.label }}</p>
         <div class="tags">
-          @for (skill of category.items; track skill) {
+          @for (skill of group.items; track skill) {
             <span class="tag">{{ skill }}</span>
           }
         </div>
-        <p class="close-bracket"><span class="op">]</span></p>
       </div>
     }
-
-    <p class="section-label"><span class="op">&#125;</span></p>
   </div>
 </section>
