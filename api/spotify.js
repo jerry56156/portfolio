@@ -1,10 +1,8 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node';
+const CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
+const CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET;
+const REFRESH_TOKEN = process.env.SPOTIFY_REFRESH_TOKEN;
 
-const CLIENT_ID = process.env['SPOTIFY_CLIENT_ID']!;
-const CLIENT_SECRET = process.env['SPOTIFY_CLIENT_SECRET']!;
-const REFRESH_TOKEN = process.env['SPOTIFY_REFRESH_TOKEN']!;
-
-async function getAccessToken(): Promise<string> {
+async function getAccessToken() {
   const res = await fetch('https://accounts.spotify.com/api/token', {
     method: 'POST',
     headers: {
@@ -16,11 +14,11 @@ async function getAccessToken(): Promise<string> {
       refresh_token: REFRESH_TOKEN,
     }).toString(),
   });
-  const data = await res.json() as { access_token: string };
+  const data = await res.json();
   return data.access_token;
 }
 
-export default async function handler(_req: VercelRequest, res: VercelResponse) {
+module.exports = async function handler(_req, res) {
   try {
     const accessToken = await getAccessToken();
 
@@ -28,7 +26,7 @@ export default async function handler(_req: VercelRequest, res: VercelResponse) 
       headers: { 'Authorization': `Bearer ${accessToken}` },
     });
 
-    const recentData = await recentRes.json() as any;
+    const recentData = await recentRes.json();
     const track = recentData.items?.[0]?.track;
 
     if (!track) {
@@ -37,11 +35,11 @@ export default async function handler(_req: VercelRequest, res: VercelResponse) 
 
     return res.status(200).json({
       title: track.name,
-      artist: track.artists.map((a: any) => a.name).join(', '),
+      artist: track.artists.map(a => a.name).join(', '),
       albumImageUrl: track.album.images[0]?.url ?? null,
       songUrl: track.external_urls.spotify,
     });
-  } catch {
+  } catch (e) {
     return res.status(500).json({ title: null });
   }
-}
+};
