@@ -1,13 +1,18 @@
 <section class="section">
   <div class="container">
-    <p class="section-label">
-      <span class="kw">const </span><span class="var">projects </span><span class="op">= [</span>
-    </p>
+    <h2 class="section-label">// Projects</h2>
 
     <div class="projects-grid">
       @for (project of projects; track project.name) {
         <div class="project-card">
-          <h3 class="project-name">{{ project.name }}</h3>
+          <div class="project-header">
+            <h3 class="project-name">{{ project.name }}</h3>
+            @if (project.github) {
+              <a class="github-link" [href]="project.github" target="_blank" rel="noreferrer">
+                <lucide-icon [img]="githubIcon" [size]="18"></lucide-icon>
+              </a>
+            }
+          </div>
           <ul class="bullets">
             @for (bullet of project.bullets; track bullet) {
               <li>{{ bullet }}</li>
@@ -21,7 +26,5 @@
         </div>
       }
     </div>
-
-    <p class="section-label"><span class="op">]</span></p>
   </div>
 </section>

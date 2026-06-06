@@ -1,18 +1,22 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { LucideAngularModule, Github } from 'lucide-angular';
 
 interface Project {
   name: string;
   bullets: string[];
   tech: string[];
+  github?: string;
 }
 
 @Component({
   selector: 'app-projects',
+  imports: [LucideAngularModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectsComponent {
+  readonly githubIcon = Github;
   readonly projects: Project[] = [
     {
       name: 'Computer-Vision Fitness Tracker',
@@ -30,6 +34,7 @@ export class ProjectsComponent {
         'Engineered role-based access control and messaging systems across Student, Exec, and Admin roles.',
       ],
       tech: ['React', 'Node.js', 'Prisma'],
+      github: 'https://github.com/jerry56156/ClubConnect',
     },
     {
       name: 'Early-Warning System for Workplace Safety',
@@ -38,6 +43,7 @@ export class ProjectsComponent {
         'Applied NAICS risk labeling and trained a Gradient Boosting model for early-warning analysis.',
       ],
       tech: ['Python', 'Scikit-learn', 'OSHA Data'],
+      github: 'https://github.com/jerry56156/Workplace_Safety_ML',
     },
     {
       name: 'My Perfect Pet',

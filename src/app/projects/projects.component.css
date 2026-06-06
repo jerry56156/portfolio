@@ -1,5 +1,4 @@
 .section {
-  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,7 +6,7 @@
 }
 
 .container {
-  width: 55vw;
+  width: 65vw;
   display: flex;
   flex-direction: column;
   padding: 40px 48px;
@@ -18,17 +17,12 @@
 }
 
 .section-label {
-  font-size: 1.4rem;
-  margin: 0 0 24px 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0 0 28px 0;
+  color: var(--color-comment);
+  transition: color 1.9s ease;
 }
-
-.section-label:last-child {
-  margin: 24px 0 0 0;
-}
-
-.kw   { color: var(--color-kw);  transition: color 1.9s ease; }
-.var  { color: var(--color-var); transition: color 1.9s ease; }
-.op   { color: var(--color-op);  transition: color 1.9s ease; }
 
 .projects-grid {
   display: grid;
@@ -48,12 +42,32 @@
   transition: background-color 1.9s ease, border-color 1.9s ease;
 }
 
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
 .project-name {
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--text-primary);
   margin: 0;
   transition: color 1.9s ease;
+}
+
+.github-link {
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  opacity: 0.7;
+  transition: opacity 160ms ease, color 1.9s ease;
+}
+
+.github-link:hover {
+  opacity: 1;
 }
 
 .bullets {
