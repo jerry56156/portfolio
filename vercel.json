@@ -1,11 +1,6 @@
 {
   "buildCommand": "ng build",
   "outputDirectory": "dist/portfolio/browser",
-  "functions": {
-    "api/*.ts": {
-      "runtime": "nodejs20.x"
-    }
-  },
   "rewrites": [
     {
       "source": "/((?!api/).*)",
