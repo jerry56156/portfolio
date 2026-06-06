@@ -32,4 +32,9 @@ export class SpotifyButtonComponent implements OnInit {
       error: () => this.loading.set(false),
     });
   }
+
+  open(): void {
+    const url = this.track()?.songUrl;
+    if (url) window.open(url, '_blank', 'noreferrer');
+  }
 }
