@@ -4,6 +4,7 @@ import { HeroComponent } from './hero/hero.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { FooterComponent } from './footer/footer.component';
 import { SkyBackgroundComponent } from './sky-background/sky-background.component';
 import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
 
@@ -16,6 +17,7 @@ import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
     ExperienceComponent,
     SkillsComponent,
     ProjectsComponent,
+    FooterComponent,
     SkyBackgroundComponent,
     ThemeToggleComponent,
   ],

@@ -1,0 +1,51 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0 32px;
+  gap: 24px;
+}
+
+.container {
+  width: 65vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 48px;
+  background: var(--section-bg);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  transition: background-color 1.9s ease;
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0 0 10px 0;
+  color: var(--color-comment);
+  transition: color 1.9s ease;
+}
+
+.sub {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+  max-width: 280px;
+  line-height: 1.6;
+  transition: color 1.9s ease;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.copy {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  opacity: 0.5;
+  margin: 0;
+  transition: color 1.9s ease;
+}
