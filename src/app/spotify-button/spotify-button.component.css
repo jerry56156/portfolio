@@ -9,7 +9,7 @@
   padding-left: 0px;
   cursor: pointer;
   display: inline-flex;
-  align-items: flex-start;
+  align-items: center;
   font: inherit;
   text-align: left;
   max-width: 420px;
@@ -25,7 +25,7 @@
 
 .content {
   display: inline-flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
   transform: translateX(0);
   transition: transform 160ms ease;
@@ -33,7 +33,6 @@
 
 .disc {
   flex-shrink: 0;
-  margin-top: 2px;
   animation: spin 3s linear infinite;
   color: var(--text-primary);
   transition: color 1.9s ease;
