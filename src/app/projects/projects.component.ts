@@ -1,11 +1,12 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { LucideAngularModule, Github } from 'lucide-angular';
+import { LucideAngularModule, Github, ExternalLink } from 'lucide-angular';
 
 interface Project {
   name: string;
   bullets: string[];
   tech: string[];
   github?: string;
+  url?: string;
 }
 
 @Component({
@@ -17,7 +18,18 @@ interface Project {
 })
 export class ProjectsComponent {
   readonly githubIcon = Github;
+  readonly externalIcon = ExternalLink;
   readonly projects: Project[] = [
+    {
+      name: 'DUST',
+      bullets: [
+        'Built a web-based exploration game at Calgary Hacks 2026 where players become digital archaeologists digging through a fictional, decaying internet.',
+        'Features real-time multiplayer with competitive and cooperative modes powered by Convex, and secure auth via Clerk.',
+      ],
+      tech: ['Next.js', 'TypeScript', 'Convex', 'Clerk'],
+      github: 'https://github.com/Abdalla-Eldoumani/DUST',
+      url: 'https://dust-mu.vercel.app',
+    },
     {
       name: 'Computer-Vision Fitness Tracker',
       bullets: [

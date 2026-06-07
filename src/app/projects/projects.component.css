@@ -57,6 +57,13 @@
   transition: color 1.9s ease;
 }
 
+.project-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
 .github-link {
   color: var(--text-secondary);
   display: flex;

@@ -7,11 +7,18 @@
         <div class="project-card">
           <div class="project-header">
             <h3 class="project-name">{{ project.name }}</h3>
-            @if (project.github) {
-              <a class="github-link" [href]="project.github" target="_blank" rel="noreferrer">
-                <lucide-icon [img]="githubIcon" [size]="18"></lucide-icon>
-              </a>
-            }
+            <div class="project-links">
+              @if (project.url) {
+                <a class="github-link" [href]="project.url" target="_blank" rel="noreferrer">
+                  <lucide-icon [img]="externalIcon" [size]="18"></lucide-icon>
+                </a>
+              }
+              @if (project.github) {
+                <a class="github-link" [href]="project.github" target="_blank" rel="noreferrer">
+                  <lucide-icon [img]="githubIcon" [size]="18"></lucide-icon>
+                </a>
+              }
+            </div>
           </div>
           <ul class="bullets">
             @for (bullet of project.bullets; track bullet) {
