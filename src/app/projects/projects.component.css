@@ -109,3 +109,18 @@
   color: var(--tech-tag-color);
   transition: background-color 1.9s ease, border-color 1.9s ease, color 1.9s ease;
 }
+
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 0;
+  }
+
+  .container {
+    width: 88vw;
+    padding: 28px 20px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}

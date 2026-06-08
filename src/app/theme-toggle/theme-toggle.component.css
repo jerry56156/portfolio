@@ -5,6 +5,13 @@
   z-index: 1000;
 }
 
+@media (max-width: 768px) {
+  :host.host {
+    top: 12px;
+    right: 12px;
+  }
+}
+
 .btn {
   display: grid;
   place-items: center;

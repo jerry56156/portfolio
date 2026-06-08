@@ -28,6 +28,21 @@
   font-size: 1.3vw;
 }
 
+@media (max-width: 768px) {
+  .main-box {
+    width: 88vw;
+    padding: 28px 24px;
+  }
+
+  .code {
+    font-size: 5.5vw;
+  }
+
+  .main-box p {
+    font-size: 0.88rem;
+  }
+}
+
 #cursor {
   display: inline-block;
   margin-left: 2px;
