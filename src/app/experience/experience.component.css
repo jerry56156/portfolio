@@ -137,30 +137,33 @@
 
   .container {
     width: 88vw;
-    padding: 28px 20px;
+    padding: 24px 14px;
+    overflow: hidden;
   }
 
   .timeline::before {
-    left: 8px;
+    left: 6px;
   }
 
   .entry,
   .entry.right {
-    justify-content: flex-start;
-    padding-left: 28px;
+    justify-content: flex-end;
+    padding-left: 0;
   }
 
   .job-card {
-    width: 100%;
+    width: calc(100% - 22px);
+    box-sizing: border-box;
+    padding: 14px 14px;
   }
 
   .dot {
-    left: 8px;
+    left: 6px;
   }
 
   .bullets {
     max-height: 600px;
     opacity: 1;
-    margin-top: 14px;
+    margin-top: 12px;
   }
 }
