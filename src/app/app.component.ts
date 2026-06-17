@@ -37,12 +37,18 @@ export class AppComponent implements AfterViewInit {
   setNight = (): void => {
     this.sky?.setNight();
     this.theme.set('night');
+    this.setThemeColor('#080818');
   };
 
   setDay = (): void => {
     this.sky?.setDay();
     this.theme.set('day');
+    this.setThemeColor('#7ab8d4');
   };
+
+  private setThemeColor(color: string): void {
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', color);
+  }
 
 
 }

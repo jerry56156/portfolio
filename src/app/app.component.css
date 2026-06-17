@@ -5,10 +5,7 @@
 .bg-video {
   z-index: -2;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100dvh;
+  inset: 0;
 }
 
 .bg-video video {
