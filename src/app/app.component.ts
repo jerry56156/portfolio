@@ -49,7 +49,6 @@ export class AppComponent implements AfterViewInit {
   private setThemeColor(color: string): void {
     document.querySelector('meta[name="theme-color"]')?.setAttribute('content', color);
     document.documentElement.style.backgroundColor = color;
-    document.body.style.backgroundColor = color;
   }
 
 
