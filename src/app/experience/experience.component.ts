@@ -17,15 +17,25 @@ interface Job {
 export class ExperienceComponent {
   readonly jobs: Job[] = [
     {
+      title: 'Coming Soon',
+      company: ':)',
+      period: 'Sept 2026 - ',
+      location: 'Calgary, AB',
+      bullets: [
+      ],
+    },
+
+    {
       title: 'Software Developer',
       company: 'Ulyfe',
       period: 'May 2026 – Present',
       location: 'Chicago (Remote)',
       bullets: [
-        'Owned end-to-end delivery of the public-facing marketing site for a live Gen Z startup.',
-        'Iterated on features across 4+ feedback cycles based on direct input from design and product leads.',
-        'Refactored codebase, eliminating 35% of dead CSS and unused components to improve maintainability.',
-        'Implemented responsive design across mobile, tablet, and desktop targeting 3 screen breakpoints.',
+        'Drove product and scope decisions in collaboration with the founding team, and gathered requirements directly from prospective business customers through a rapid TestFlight release-and-demo cycle.',
+        'Architected and shipped a full-stack loyalty points economy — escrow-backed quest banks, atomic PostgreSQL functions, and a cross-business QR redemption network with race condition guards.',
+        'Built and deployed 5+ Deno edge functions for quest verification, point payouts, and push notifications.',
+        'Owned end-to-end delivery of the public-facing marketing site (ulyfe.info), iterating across 4+ feedback cycles with design and product leads.',
+        'Refactored both the app and marketing site codebases, eliminating 35% dead CSS and unused components.',
       ],
     },
     {

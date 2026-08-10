@@ -15,11 +15,11 @@ export class SkillsComponent {
   readonly groups: SkillGroup[] = [
     {
       label: 'Languages',
-      items: ['Python', 'TypeScript', 'Java', 'C# (.NET)', 'C++', 'SQL', 'R', 'HTML / CSS'],
+      items: ['Python', 'TypeScript', 'Java', 'C++', 'SQL', 'R', 'HTML / CSS'],
     },
     {
       label: 'Frameworks & Libraries',
-      items: ['Angular', 'React', 'Svelte', 'Node.js', '.NET'],
+      items: ['Angular', 'React', 'React Native', 'Svelte', 'Node.js'],
     },
     {
       label: 'Tools & Platforms',
