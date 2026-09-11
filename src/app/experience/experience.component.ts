@@ -17,9 +17,9 @@ interface Job {
 export class ExperienceComponent {
   readonly jobs: Job[] = [
     {
-      title: 'Coming Soon',
-      company: ':)',
-      period: 'Sept 2026 - ',
+      title: 'SAP Associate',
+      company: 'IBM',
+      period: 'Sept 2026 - Present',
       location: 'Calgary, AB',
       bullets: [
       ],
@@ -28,7 +28,7 @@ export class ExperienceComponent {
     {
       title: 'Software Developer',
       company: 'Ulyfe',
-      period: 'May 2026 – Present',
+      period: 'May 2026 – September 2026',
       location: 'Chicago (Remote)',
       bullets: [
         'Drove product and scope decisions in collaboration with the founding team, and gathered requirements directly from prospective business customers through a rapid TestFlight release-and-demo cycle.',
