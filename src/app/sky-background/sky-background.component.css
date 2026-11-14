@@ -26,3 +26,11 @@
 .video-layer {
   background: transparent;
 }
+
+.video-layer {
+  visibility: hidden;
+}
+
+.video-layer.active {
+  visibility: visible;
+}

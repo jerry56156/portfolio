@@ -2,15 +2,29 @@
   <img
     class="still-layer"
     [src]="stillSrc()"
+    decoding="async"
     aria-hidden="true"
   />
   <video
-    #vid
+    #d2nVid
     class="video-layer"
+    [class.active]="activeVideo() === 'd2n'"
+    [src]="assets.d2n"
     muted
     playsinline
     preload="auto"
-    (ended)="onEnded()"
+    (ended)="onEnded('d2n')"
+    aria-hidden="true"
+  ></video>
+  <video
+    #n2dVid
+    class="video-layer"
+    [class.active]="activeVideo() === 'n2d'"
+    [src]="assets.n2d"
+    muted
+    playsinline
+    preload="auto"
+    (ended)="onEnded('n2d')"
     aria-hidden="true"
   ></video>
 </div>
