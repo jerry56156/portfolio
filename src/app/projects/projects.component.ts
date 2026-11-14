@@ -21,6 +21,17 @@ export class ProjectsComponent {
   readonly externalIcon = ExternalLink;
   readonly projects: Project[] = [
     {
+      name: 'Budget',
+      bullets: [
+        'Built a native macOS expense tracker in SwiftUI (macOS 14+) that stores all data in plain CSV files, with no database or network access.',
+        'Added a monthly dashboard with budget progress, category totals, and a cash-flow summary of pay minus fixed costs minus budget, plus a month picker for past months.',
+        'Covered the CSV parser, validation, schedule math and totals with 82 unit tests. Malformed rows are reported with file and line number instead of being dropped.',
+        'Mainly for self-utility since I wanted a tool to keep my budget in check :)'
+      ],
+      tech: ['Swift', 'SwiftUI', 'XCTest', 'CSV'],
+      github: 'https://github.com/jerry56156/budget-tracker',
+    },
+    {
       name: 'DUST',
       bullets: [
         'Built a web-based exploration game at Calgary Hacks 2026 where players become digital archaeologists digging through a fictional, decaying internet.',

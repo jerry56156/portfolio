@@ -17,7 +17,7 @@ interface Job {
 export class ExperienceComponent {
   readonly jobs: Job[] = [
     {
-      title: 'SAP Associate',
+      title: 'Developer',
       company: 'IBM',
       period: 'Sept 2026 - Present',
       location: 'Calgary, AB',
