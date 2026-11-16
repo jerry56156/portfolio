@@ -34,3 +34,7 @@
 .video-layer.active {
   visibility: visible;
 }
+
+.still-layer.hidden {
+  visibility: hidden;
+}

@@ -27,9 +27,7 @@ export class SkyBackgroundComponent implements AfterViewInit {
     n2d: 'media/night-to-day.mp4',
   } as const;
 
-  readonly stillSrc = computed(() =>
-    this.settledMode() === 'day' ? this.assets.stillDay : this.assets.stillNight
-  );
+  readonly showDayStill = computed(() => this.settledMode() === 'day');
 
   /** Bumped on every toggle so stale play()/ended callbacks are ignored. */
   private token = 0;
@@ -106,10 +104,9 @@ export class SkyBackgroundComponent implements AfterViewInit {
     if (token !== this.token) return;
     this.settledMode.set(this.mode());
     this.phase.set('still');
-    // Keep the last video frame up until the new still is painted, then hide it.
-    requestAnimationFrame(() => {
-      if (token === this.token && this.phase() === 'still') this.activeVideo.set(null);
-    });
+    // Leave the finished video on screen: its last frame matches the still, and
+    // hiding it here can expose the still layer before it repaints (a flash).
+    // It gets replaced when the next transition's video is revealed.
   }
 
   private videos(): HTMLVideoElement[] {

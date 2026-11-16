@@ -1,8 +1,15 @@
 <div class="wrap" [attr.data-mode]="mode()">
+  <!-- Both stills stay mounted; only visibility toggles, so there's never an src swap. -->
   <img
     class="still-layer"
-    [src]="stillSrc()"
-    decoding="async"
+    [class.hidden]="!showDayStill()"
+    [src]="assets.stillDay"
+    aria-hidden="true"
+  />
+  <img
+    class="still-layer"
+    [class.hidden]="showDayStill()"
+    [src]="assets.stillNight"
     aria-hidden="true"
   />
   <video
